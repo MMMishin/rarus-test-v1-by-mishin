@@ -1,0 +1,535 @@
+.stocks {
+	padding-bottom: 96px;
+	&__heading {
+		padding: 36px 0;
+	}
+	&__title {
+		margin: 0;
+	}
+	&__cards {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 34px;
+		flex-wrap: wrap;
+	}
+	&__card {
+		display: flex;
+		align-items: center;
+		transition: $default-transition;
+		text-decoration: none;
+		width: calc((100% - 68px) / 3);
+		height: 203px;
+		background-color: $bg-gray-color;
+		border-radius: 10px;
+		box-shadow: 0px 6px 30px 4px rgba(32, 32, 32, 0.10);
+		color: $text-white-color;
+		padding: 28px;
+		position: relative;
+		overflow: hidden;
+		box-sizing: border-box;
+		&:hover {
+			color: $text-white-color;
+		}
+		&-content {
+			max-width: 136px;
+			z-index: 4;
+			position: relative;
+		}
+		&-logo {
+			margin-bottom: 10px;
+		}
+		&-title {
+			font-size: 21px;
+			font-weight: 700;
+			margin-bottom: 8px;
+			margin-top: 0;
+		}
+		&-descr {
+			font-size: 11px;
+		}
+	}
+}
+
+.gaming {
+	background: linear-gradient(90deg, #D535E3 0.19%, #6F74E4 99.72%, #0052A4 99.72%);
+	&__img {
+		position: absolute;
+		transition: $default-transition;
+		object-fit: contain;
+		object-position: center;
+		&_1 {
+			width: 63px;
+			height: 28px;
+			bottom: 69px;
+			right: 99px;
+			z-index: 1;
+			transform: rotate(-20deg);
+		}
+		&_2 {
+			width: 66px;
+			height: 103px;
+			bottom: 43px;
+			right: 35px;
+			z-index: 2;
+			transform: rotate(27deg);
+		}
+		&_3 {
+			width: 75px;
+			height: 70px;
+			bottom: 82px;
+			right: 82px;
+			z-index: 3;
+			transform: rotate(-10deg);
+		}
+	}
+	&:hover {
+		& > .gaming__img_1 {
+			bottom: 59px;
+			right: 109px;
+			transform: rotate(-10deg);
+		}
+		& > .gaming__img_2 {
+			bottom: 33px;
+			right: 25px;
+			transform: rotate(44deg);
+		}
+		& > .gaming__img_3 {
+			bottom: 92px;
+			right: 92px;
+			transform: rotate(-20deg);
+		}
+	}
+}
+
+.samsung {
+	background: $bg-black-color;
+	&__img {
+		position: absolute;
+		transition: $default-transition;
+		object-fit: contain;
+		object-position: center;
+		&_1 {
+			right: 0;
+			top: 0;
+			height: 100%;
+			width: 190px;
+			border-radius: 10px;
+			z-index: 1;
+		}
+		&_2 {
+			width: 145px;
+			height: 103px;
+			right: 28px;
+			top: 50%;
+			transform: translate(0, -50%);
+			z-index: 2;
+		}
+	}
+	&:hover {
+		& > .samsung__img_2 {
+			transform: translate(0, -50%) scale(1.05) rotate(5deg);
+		}
+	}
+}
+
+.hp {
+	background: linear-gradient(180deg, #01B9D5 58.08%, rgba(0, 165, 183, 0.00) 113.07%);
+	padding: 18px 28px;
+	align-items: flex-start;
+	& > .stocks__card-content {
+		position: relative;
+		max-width: 170px;
+		padding-left: 38px;
+		& > .stocks__card-logo {
+			margin-bottom: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+	&__image {
+		position: absolute;
+		transition: $default-transition;
+		object-fit: contain;
+		object-position: center;
+		&_1 {
+			left: -5px;
+			bottom: 26px;
+			width: 156px;
+			height: 56px;
+		}
+		&_2 {
+			left: 166px;
+			bottom: 37px;
+			width: 21px;
+			height: 34px;
+		}
+		&_3 {
+			top: 50%;
+			transform: translate(0, -50%);
+			right: -52px;
+			width: 198px;
+			height: 150px;
+		}
+	}
+	&:hover {
+		& > .hp__image_1 {
+			left: -15px;
+			transform: rotate(5deg);
+		}
+		& > .hp__image_2 {
+			left: 156px;
+			transform: rotate(5deg);
+		}
+		& > .hp__image_3 {
+			right: -62px;
+			transform: translate(0, -50%) rotate(-5deg);
+		}
+	}
+}
+
+.philips {
+	background: radial-gradient(53.22% 53.2% at 66.62% 50.25%, #EC5161 0%, #D60633 0.67%, #121212 100%);
+	& > .stocks__card-content {
+		max-width: 150px;
+		& > .stocks__card-title {
+			max-width: 140px;
+		}
+	}
+	&__image {
+		position: absolute;
+		object-fit: contain;
+		object-position: center;
+		transition: $default-transition;
+		&_1 {
+			top: 52px;
+			right: 52px;
+			width: 135px;
+			height: 83px;
+			z-index: 1;
+		}
+		&_2 {
+			right: 18px;
+			bottom: 52px;
+			width: 122px;
+			height: 68px;
+			z-index: 2;
+		}
+	}
+	&:hover {
+		& > .philips__image_1 {
+			top: 42px;
+			right: 57px;
+		}
+		& > .philips__image_2 {
+			bottom: 42px;
+			right: 13px;
+		}
+	}
+}
+
+.bosch {
+	background: #E7EBEC;
+	color: $text-black-color;
+	&:hover {
+		color: $text-black-color;
+		& > .bosch__img_1 {
+			transform: scale(1.05);
+		}
+		& > .bosch__img_2 {
+			transform: translate(0, -50%) scale(1.05);
+		}
+	}
+	& > .stocks__card-content {
+		max-width: 150px;
+		& > .bosch .stocks__card-title {
+			max-width: 125px;
+		}
+	}
+	&__img {
+		position: absolute;
+		transition: $default-transition;
+		object-fit: contain;
+		object-position: center;
+		&_1 {
+			right: 80px;
+			bottom: 30px;
+			width: 65px;
+			height: 82px;
+			z-index: 2;
+		}
+		&_2 {
+			width: 55px;
+			height: 137px;
+			right: 35px;
+			top: 50%;
+			transform: translate(0, -50%);
+			z-index: 1;
+		}
+		&_3 {
+			top: 20px;
+			right: 28px;
+			width: 127px;
+			height: 119px;
+			z-index: 3;
+		}
+	}
+}
+
+.iphone {
+	background-color: $bg-white-color;
+	&__img {
+		position: absolute;
+		transition: $default-transition;
+		object-fit: contain;
+		object-position: center;
+		&_1 {
+			width: 100%;
+			height: 65px;
+			left: 0;
+			top: 22px;
+		}
+		&_2 {
+			width: 308px;
+			height: 69px;
+			right: -5px;
+			bottom: 27px;
+		}
+	}
+	&:hover {
+		& > .iphone__img_2 {
+			transform: scale(1.05);
+		}
+	}
+}
+
+.review {
+	background-color: $bg-red-color;
+	& > .stocks__card-content {
+		max-width: 200px;
+		& > .stocks__card-descr {
+			max-width: 123px;
+		}
+	}
+	&__img {
+		position: absolute;
+		transition: $default-transition;
+		object-fit: contain;
+		object-position: center;
+		&_1 {
+			right: -5px;
+			top: 50%;
+			transform: translate(0, -50%);
+			width: 93px;
+			height: 159px;
+		}
+	}
+	&:hover {
+		& > .review__img_1 {
+			transform: translate(0, -50%) scale(1.05);
+		}
+	}
+}
+
+.super {
+	background-color: $bg-white-color;
+	border: 2px solid $bg-red-color;
+	color: $text-red-color;
+	&:hover {
+		color: $text-red-color;
+		& > .super__img_1 {
+			right: -30px;
+		}
+	}
+	&__img {
+		position: absolute;
+		transition: $default-transition;
+		object-fit: contain;
+		object-position: center;
+		&_1 {
+			width: 174px;
+			height: 147px;
+			right: -15px;
+			top: 50%;
+			transform: translate(0, -50%);
+		}
+	}
+}
+
+.sales {
+	background-color: $bg-white-color;
+	color: $text-red-color;
+	border: 2px solid $bg-red-color;
+	justify-content: center;
+	&:hover {
+		color: $text-red-color;
+		& > .sales__img_1 {
+			transform: translate(-50%, -50%) scale(1.1);
+		}
+	}
+	& > .stocks__card-content {
+		max-width: 150px;
+		z-index: 2;
+		& > .stocks__card-title {
+			text-align: center;
+		}
+		& > .stocks__card-descr {
+			text-align: center;
+			color: $text-black-color;
+		}
+	}
+	&__img {
+		position: absolute;
+		transition: $default-transition;
+		object-fit: contain;
+		object-position: center;
+		&_1 {
+			width: 102%;
+			height: 102%;
+			object-fit: cover;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 1;
+		}
+	}
+}
+
+@media screen and (max-width : 1200px) {
+	.stocks {
+		&__cards {
+			justify-content: center;
+		}
+		&__card {
+			width: calc((100% - 34px) / 2);
+			max-width: 361px;
+		}
+	}
+}
+
+@media screen and (max-width : 768px) {
+	.stocks {
+		padding-bottom: 72px;
+		&__cards {
+			justify-content: flex-start;
+			gap: 18px;
+		}
+	}
+}
+
+@media screen and (max-width : 576px) {
+	.stocks {
+		padding-bottom: 48px;
+		&__heading {
+			padding: 24px 0;
+		}
+		&__card {
+			width: 100%;
+			max-width: 100%;
+			padding: 18px;
+			height: 169px;
+			&-title {
+				font-size: 18px;
+			}
+		}
+	}
+	.gaming {
+		&__img {
+			&_1 {
+				right: 82px;
+				bottom: 49px;
+			}
+			&_2 {
+				right: 18px;
+				bottom: 23px;
+			}
+			&_3 {
+				right: 65px;
+				bottom: 62px;
+			}
+		}
+	}
+	.samsung {
+		&__img {
+			&_1 {
+				width: 145px;
+			}
+			&_2 {
+				right: 18px;
+				width: 120px;
+			}
+		}
+	}
+	.hp {
+		&__image {
+			&_1 {
+				width: 125px;
+				height: 45px;
+			}
+			&_2 {
+				left: 130px;
+				bottom: 32px;
+			}
+			&_3 {
+				width: 160px;
+				height: 100px;
+			}
+		}
+	}
+	.philips {
+		& > .stocks__card-content {
+			& > .stocks__card-title {
+				max-width: 120px;
+			}
+		}
+		&__image {
+			&_1 {
+				top: 40px;
+				width: 100px;
+				height: 60px;
+			}
+			&_2 {
+				bottom: 45px;
+				width: 100px;
+				height: 55px;
+			}
+		}
+	}
+	.bosch {
+		& > .stocks__card-content {
+			max-width: 120px;
+		}
+		&__img {
+			&_1 {
+				right: 87px;
+				bottom: 10px;
+				width: 50px;
+			}
+			&_2 {
+				height: 110px;
+				right: 25px;
+			}
+			&_3 {
+				right: 18px;
+			}
+		}
+	}
+	.iphone {
+		&__img {
+			&_2 {
+				width: 250px;
+				height: 55px;
+				bottom: 20px;
+			}
+		}
+	}
+	.review {
+		&__img {
+			&_1 {
+				width: 90px;
+				height: 140px;
+			}
+		}
+	}
+}
